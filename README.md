@@ -1,5 +1,14 @@
-# Unscented Kalman Filter Project Starter Code
-Self-Driving Car Engineer Nanodegree Program
+# Unscented Kalman Filter
+
+This project is a simple working imlementation of an unscented kalman filter, it is able to make accurate estimations about an objects position and velocity and adjust it's predictions based on additional data that it processes and updates.
+
+
+The UKF is founded on the intuition that it is easier to approximate a probability distribution that it is to approximate an arbitrary nonlinear function or transformation.
+The sigma points are chosen so that their mean and covariance to be exactly x a k−1 and Pk−1.
+Each sigma point is then propagated through the nonlinearity yielding in the end a cloud of transformed points.
+The new estimated mean and covariance are then computed based on their statistics. This process is called unscented transformation.
+The unscented transformation is a method for calculating the statistics of a random variable which undergoes a nonlinear transformation
+
 
 ---
 
@@ -18,26 +27,9 @@ Self-Driving Car Engineer Nanodegree Program
    some sample inputs in 'data/'.
     - eg. `./UnscentedKF ../data/obj_pose-laser-radar-synthetic-input.txt`
 
-## Editor Settings
-
-We've purposefully kept editor configuration files out of this repo in order to
-keep it as simple and environment agnostic as possible. However, we recommend
-using the following settings:
-
-* indent using spaces
-* set tab width to 2 spaces (keeps the matrices in source code aligned)
-
 ## Code Style
 
 Please stick to [Google's C++ style guide](https://google.github.io/styleguide/cppguide.html) as much as possible.
-
-## Generating Additional Data
-
-This is optional!
-
-If you'd like to generate your own radar and lidar data, see the
-[utilities repo](https://github.com/udacity/CarND-Mercedes-SF-Utilities) for
-Matlab scripts that can generate additional data.
 
 ## Project Instructions and Rubric
 
